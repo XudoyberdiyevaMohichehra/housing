@@ -1,1 +1,1 @@
-export const navbar=[ghj]
+export const navbar=[ghj,vbnm]

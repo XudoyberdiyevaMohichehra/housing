@@ -25,14 +25,14 @@ export const Wrapper = styled.div`
 export const Section = styled.div`
  display:flex;
  align-items:center;
-//  gap:10px;
  cursor: ${({logo})=> logo && 'pointer'};
  .active{
     color: yellowgreen;
  }
 `
 export const Logo = styled(logoimg)`
- width:30px;
+ width:50px;
+ height:36px;
  & path{
    fill:#fff;  
  }

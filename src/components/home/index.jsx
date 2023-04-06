@@ -1,11 +1,14 @@
 import React from "react";
 import {Container} from './style'
+import { Input, Button } from "../Generics/index.jsx";
 
-export const Generic =()=>{
+export const Home =()=>{
   return(
     <Container>
-      <h1>Generic</h1>
+      <h1>Home</h1>
+      <Input width={200} />
+      <Button>click</Button>
     </Container>
   )
 }
-export default Generic
+export default Home

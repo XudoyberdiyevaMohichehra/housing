@@ -7,7 +7,7 @@ export const Home =()=>{
     <Container>
       <h1>Home</h1>
       <Input width={200} />
-      <Button>click</Button>
+      {/* <Button>click</Button> */}
     </Container>
   )
 }

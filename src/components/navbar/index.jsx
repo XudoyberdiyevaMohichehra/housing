@@ -3,7 +3,7 @@ import {Container, Wrapper, Section, Logo, Link, Main} from './style'
 import {  Outlet, useNavigate } from "react-router-dom";
 import { navbar } from "../../utils/navbar";
 import { Button } from "../Generics/Button";
-// import Filter from "../Filter";
+import Filter from "../Filter";
 
 
 
@@ -28,7 +28,7 @@ export const Navbar =()=>{
           </Section>
         </Wrapper>
       </Main>
-      {/* <Filter /> */}
+      <Filter />
       <Outlet />
     </Container>
   )

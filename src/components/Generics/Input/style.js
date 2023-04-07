@@ -50,6 +50,12 @@ const Container = styled.input`
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   outline:none;
   border:1px solid  #E6E9EC;
+  padding-left: ${({ icon }) => (icon ? "35px" : "20px")};
+  font-size:15px;
+  letter-spacing: 0.07rem;
+   ::placeholder{
+    color:#0D263B;
+  }
 
   //   ${getType}
 //   :active {
@@ -57,4 +63,17 @@ const Container = styled.input`
 //   }
 `;
 
-export { Container };
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  width: ${({ width }) => (width ? `${width}px` : "100%")};
+  position: relative;
+`;
+
+const Icon = styled.div`
+  position: absolute;
+  left: 10px;
+  display: flex;
+`;
+
+export { Container, Wrapper, Icon };

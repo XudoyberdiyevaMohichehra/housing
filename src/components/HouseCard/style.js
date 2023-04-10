@@ -26,7 +26,7 @@ export const Container = styled.div`
 export const Img = styled.img`
  width:100%;
  max-height: 220px;
- min-height: 200px;
+ min-height: 220px;
 
 `
 export const Content = styled.div`

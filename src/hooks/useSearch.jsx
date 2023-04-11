@@ -1,8 +1,16 @@
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 
-export const useSearch = () => {
-    const { search } = useLocation();
-    return new URLSearchParams(search);
+// export const useSearch = () => {
+//     const { search } = useLocation();
+//     return new URLSearchParams(search);
+// };
+
+// export default useSearch;
+
+import { useLocation } from "react-router-dom";
+
+export const useSearch =()=>{
+    const {search} = useLocation();
+    return new URLSearchParams(search)
 };
-
-export default useSearch;
+export default useSearch

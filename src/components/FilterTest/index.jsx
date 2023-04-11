@@ -29,7 +29,8 @@ export const FilterTest = () => {
   };
 
   const items =[{label: (
-    <MenuWrapper>
+    // <MenuWrapper>
+    <>
       <h1 className="subTitle">Address</h1>
       <Section>
         <Input
@@ -72,7 +73,9 @@ export const FilterTest = () => {
         <Input width={'100%'} ref={minPriceRef} placeholder={"Min price"} />
         <Input width={'100%'} ref={maxPriceRef} placeholder={"Max price"} />
       </Section>
-    </MenuWrapper>)}]
+          </>
+    // </MenuWrapper>
+    )}]
    
   
   return (

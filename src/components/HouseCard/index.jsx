@@ -3,14 +3,12 @@ import noimg from '../../assets/img/noimg.jpeg'
 import { Container, Img, Content, Details, Icons,  Divider } from './style'
 
 
-export const HouseCard =({data})=>{
-  const { attachments, city, country, description, salePrice, price, garage, ruler, address, houseDetails } = data;
-  console.log(data);
+export const HouseCard =({data = {}})=>{
+  const { attachments, city, country, description, salePrice, price, address, houseDetails } = data;
   let url = new URL(window.location.href)
-  // console.log(url);
   return(
     <Container>
-      <Img src={attachments[0]?.imgPath || noimg}/>
+      <Img src={attachments && attachments[0]?.imgPath || noimg}/>
       <Content>
         <div className="subTitle inline">{city}, {country}, {description}</div>
         <div className="info">{address || 'Quincy St, Brooklyn, NY, USA'}</div>

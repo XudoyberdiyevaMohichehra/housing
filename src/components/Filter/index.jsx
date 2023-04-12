@@ -7,6 +7,7 @@ import { uzeReplace } from "../../hooks/useReplace";
 import { useNavigate, useLocation } from "react-router-dom";
 import useSearch from "../../hooks/useSearch";
 
+
 export const Filter = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -48,7 +49,7 @@ export const Filter = () => {
         />
         <Input
           onChange={onChange}
-          name="city"
+          name="address"
           defaultValue={query.get("city")}
           ref={cityRef}
           placeholder={"City"}

@@ -1,14 +1,14 @@
 import React from "react";
 import noimg from '../../assets/img/noimg.jpeg'
-import { Container, Img, Content, Blur, Icons } from './style'
+import { Container, Img, Content, Blur} from './style'
 import category from '../../assets/img/category.png'
+import {data} from '../../utils/data'
 
-
-export const CategoryCard =({data = {}})=>{
-  const { name } = data;
+export const CategoryCard =({data1 = {}})=>{
+  const { name, onClick } = data1;
   
   return(
-    <Container>
+    <Container onClick={onClick}>
       <Img src={category || noimg }/>
       <Blur/>
       <Content>

@@ -5,13 +5,12 @@ import { Container, Img, Content, Details, Icons,  Divider } from './style'
 
 export const HouseCard =({data = {}})=>{
   const { attachments, city, country, description, salePrice, price, address, houseDetails, category } = data;
-  // let url = new URL(window.location.href)
   return(
     <Container>
       <Img src={(attachments && attachments[0])?.imgPath || noimg}/>
       <Content>
         <div className="subTitle inline">{city}, {country}, {description}</div>
-        <div className="info">{address || 'Quincy St, Brooklyn, NY, USA'} - {category?.name || 'Category'}</div>
+        <div className="info">{address || 'Quincy St, Brooklyn, NY, USA'} - {category?.name || 'Category'} {houseDetails?.room || 0}-rooms</div>
         <Details>
           <Details.Items footer>
             <Icons.Bed />

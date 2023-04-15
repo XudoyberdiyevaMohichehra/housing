@@ -53,7 +53,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  margin-top: 8px;
+  margin-top: 10px;
 
   color: #696969;
 }
@@ -75,35 +75,3 @@ body {
 }
 
 
-/* {
-
-    id: useId,
-    element: <React.Suspense fallback= {
-      <React.Fragment>Loading....</React.Fragment>
-    }
-
-    ><HomePage /></React.Suspense>,
-    title: 'Home',
-    path: '/home',
-    private: false,
-    hidden: false
-  }
-
-  ,
-  {
-
-  id: useId,
-  element: <React.Suspense fallback= {
-    <React.Fragment>Loading....</React.Fragment>
-  }
-
-  ><PropertyPage /></React.Suspense>,
-  title: 'Properties',
-  path: '/properties',
-  private: false,
-  hidden: false
-}
-
-, */
-/* const HomePage=React.lazy(()=> import('../pages/home/index'));
-const PropertyPage=React.lazy(()=> import('../pages/properties/index')); */

@@ -8,7 +8,7 @@ import { ReactComponent as resize } from "../../assets/icons/resize.svg";
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 380px;
+  max-width: 350px;
   min-width: 330px;
   margin: ${({ gap }) => {
         return gap && `0 ${gap}px`;

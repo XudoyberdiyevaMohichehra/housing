@@ -1,15 +1,23 @@
 import React from "react";
-import { Container, HouseContainer } from './style'
+import { Container,} from './style'
 import GenCarousel from '../Carousel'
 import Category from '../Category'
+import Recommended from "../Recommended";
+import Why from "../Why";
+import Recent from "../Recent";
+import Banner from '../Banner'
+
+
 
 export const Home =()=>{
   return(
     <Container>
       <GenCarousel/>
-      <HouseContainer>
-        <Category/>
-      </HouseContainer>
+      <Recommended/>
+      <Why/>
+      <Category />
+      <Banner />
+      <Recent />
     </Container>
   )
 }

@@ -4,7 +4,7 @@ import {  Outlet, useNavigate } from "react-router-dom";
 import { navbar } from "../../utils/navbar";
 import { Button } from "../Generics/Button";
 import Filter from "../Filter";
-// import FilterTest from "../FilterTest";
+import Footer from "../Footer";
 
 
 
@@ -31,8 +31,8 @@ export const Navbar =()=>{
         </Wrapper>
       </Main>
       <Filter />
-      {/* <FilterTest /> */}
       <Outlet />
+     <Footer/>
     </Container>
             </>
   )

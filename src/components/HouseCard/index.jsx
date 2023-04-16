@@ -3,10 +3,11 @@ import noimg from '../../assets/img/noimg.jpeg'
 import { Container, Img, Content, Details, Icons,  Divider } from './style'
 
 
-export const HouseCard =({data = {}, gap,} )=>{
+export const HouseCard =({data = {}, gap, onClick} )=>{
   const { attachments, city, country, description, salePrice, price, address, houseDetails, category } = data;
   return(
-    <Container gap={gap}>
+    <div style={{display: 'flex'}} onClick={onClick}>
+    <Container gap={gap} >
       <Img src={(attachments && attachments[0])?.imgPath || noimg}/>
       <Content>
         <div className="subTitle inline">{city}, {country}, {description}</div>
@@ -43,6 +44,7 @@ export const HouseCard =({data = {}, gap,} )=>{
       </Content>
      
     </Container>
+          </div>
   )
 }
 export default HouseCard

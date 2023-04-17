@@ -56,7 +56,9 @@ const Container = styled.input`
    ::placeholder{
     color:#0D263B;
   }
-
+ :focus{
+    border: 1px solid #0061df
+ }
   //   ${getType}
 //   :active {
 //     opacity: 0.7;

@@ -27,6 +27,11 @@ export const Property =()=>{
   };
 
   return(
+    <>
+      <div className="title">Properties</div>
+      <div className="info" style={{ textAlign: "center" }}>
+        Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
+      </div>
     <Container>
           {data.map((value)=>{
             return <HouseCard 
@@ -34,6 +39,7 @@ export const Property =()=>{
             key={value.id} data={value}/>
           })}
     </Container>
+          </>
   )
 }
 export default Property

@@ -43,15 +43,12 @@ body {
 }
 
 .info {
-  /* Paragraph/Small/Regular */
-
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   margin-top: 10px;
-
   color: #696969;
 }
 

@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useRequest from '../../hooks/useRequest'
-import { Wrapper, Container, Details, Section, Content, Icons, Description } from "./style";
+import Input from "../Generics/Input";
+import Button from "../Generics/Button";
+import { Checkbox } from "antd";
+
+import nouser from "../../assets/img/nouser.jpeg";
+import { Wrapper, Container, Details, Section, Content, Icons, Description, User } from "./style";
+import { Yandex } from "../Generics/Yandex";
 const {REACT_APP_BASE_URL: url} = process.env;
 
 
@@ -186,6 +192,22 @@ export const HouseItem = () => {
           <Content.Title mt={48} mb>
             Location
           </Content.Title>
+        </Container>
+
+        <Container className="user" flex={1}>
+          <Section style={{ justifyContent: "flex-start" }}>
+            <User.Img src={nouser} alt="img" />
+            <Content>
+              <div className="subtitle">Web Brain</div>
+              <div className="info">998 33 5762020</div>
+            </Content>
+          </Section>
+          <Input width="%" placeholder="Name" />
+          <Input width="%" placeholder="Phone" />
+          <Input width="%" placeholder="Email" />
+          <Input width="%" placeholder="Message" />
+          <Checkbox>By submitting this form I agree to Terms of Use</Checkbox>
+          <Button width="%">Send Request</Button>
         </Container>
       </Wrapper>
     </>

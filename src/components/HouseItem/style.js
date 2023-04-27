@@ -34,7 +34,6 @@ export const Wrapper = styled.div`
   margin-right: auto;
   width: 100%;
   display: flex;
-  display: flex;
   padding-top: 24px;
 `;
 
@@ -42,12 +41,14 @@ export const Section = styled.div`
   display:flex;
   justify-content:space-between;
 `;
+
 export const Content = styled.div`
-  display:flex;
-  flex-direction:${({flex})=> !flex ? 'column' : 'row'};
+  display: flex;
+  flex-direction: ${({ flex }) => !flex && "column"};
   align-items: ${({ flex }) => flex && "center"};
   justify-content: ${({ flex }) => !flex && "center"};
   `;
+
 Content.Title = styled.div`
   font-family: "Montserrat";
   font-style: normal;
@@ -131,4 +132,13 @@ export const Description = styled.div`
   line-height: 20px;
   color: #696969;
   margin-bottom: 48px;
+`;
+
+export const User = styled.div``;
+
+User.Img = styled.img`
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-right: 10px;
 `;

@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import useRequest from '../../hooks/useRequest'
+// import useRequest from '../../hooks/useRequest'
 import Input from "../Generics/Input";
 import Button from "../Generics/Button";
 import { Checkbox } from "antd";
 
 import nouser from "../../assets/img/nouser.jpeg";
 import { Wrapper, Container, Details, Section, Content, Icons, Description, User } from "./style";
-import { Yandex } from "../Generics/Yandex";
-const {REACT_APP_BASE_URL: url} = process.env;
+// import { Yandex } from "../Generics/Yandex";
+import { Recent } from "../Recent";
+
+// const {REACT_APP_BASE_URL: url} = process.env;
 
 
 export const HouseItem = () => {
   const [data, setData] = useState({});
   const params = useParams();
-  const request = useRequest();
+  // const request = useRequest();
 
   useEffect(() => {
     fetch(
@@ -210,6 +212,20 @@ export const HouseItem = () => {
           <Button width="%">Send Request</Button>
         </Container>
       </Wrapper>
+      <Wrapper>
+        {/* <Yandex /> */}
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191884.8413117063!2d69.11421069176203!3d41.282737456445076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2sTashkent%2C%20Uzbekistan!5e0!3m2!1sen!2s!4v1681357504114!5m2!1sen!2s"
+          title="googleMap"
+          width="100%"
+          height="450"
+          style={{ border: "0" }}
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </Wrapper>
+      <Recent style={{ marginTop: "24px" }} />
     </>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import { Dropdown } from "antd";
-import {Container, Wrapper, Section, Logo, Link, Main} from './style'
+import {Container, Wrapper, Section, Logo, Link, Main, Menu} from './style'
 import {  Outlet, useNavigate } from "react-router-dom";
 import { navbar } from "../../utils/navbar";
 import { Button } from "../Generics/Button";
@@ -11,13 +11,37 @@ import Footer from "../Footer";
 
 export const Navbar =()=>{
   const token = localStorage.getItem('token')
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
   const onClick = ()=>{
     navigate('/signin')
   }
- const menu = (
-  <div>hey</div>
- )
+  
+  const onClickProfile = ({
+    target: {
+      dataset: { name },
+    },
+  }) => {
+    if (name === "logout") {
+      localStorage.removeItem("token");
+      navigate("/home");
+    } else {
+      navigate(`${name}`);
+    }
+  };
+  const menu = (
+    <Menu>
+      <Menu.Item data-name="myprofile" onClick={onClickProfile}>
+        My profile
+      </Menu.Item>
+      <Menu.Item data-name="favourite" onClick={onClickProfile}>
+        Favourites
+      </Menu.Item>
+      <Menu.Item data-name="logout" onClick={onClickProfile}>
+        Log Out
+      </Menu.Item>
+    </Menu>
+  );
   return(
     <>
     <Container>

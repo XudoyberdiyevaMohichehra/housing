@@ -44,3 +44,24 @@ export const Link = styled(NavLink)`
  color:#fff;
  padding: 0 32px;
 `
+export const Menu = styled.div`
+  padding: 16px;
+  background: #ffffff;
+  box-shadow: 0px 20px 38px rgba(0, 0, 0, 0.06),
+    0px 7px 46px rgba(0, 0, 0, 0.06), 0px 8px 15px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 177px;
+  border-radius: 4px;
+`;
+
+Menu.Item = styled.div`
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  cursor: pointer;
+`;

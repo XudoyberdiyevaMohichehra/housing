@@ -1,9 +1,9 @@
-import React from "react";
+import React , {useState}from "react";
 import { Container, Content } from "./style";
 import CategoryCard from "../CategoryCard";
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
-import {data} from '../../utils/data'
+
 
 // const { REACT_APP_BASE_URL: url } = process.env
 
@@ -22,9 +22,18 @@ const settings = {
   appendDots: (dots) => <h1> {dots} </h1>,
 };
 
+const mockDataCategory = [
+  { id: 1, name: "Dom" },
+  { id: 2, name: "Villa" },
+  { id: 3, name: "House" },
+  { id: 4, name: "Cottage" },
+  { id: 5, name: "Elegant" },
+  { id: 6, name: "VIP" },
+];
+
 export const Category = () => {
   
-  // const [data, setData] = useState([]);
+  const [data1, /* setData*/] = useState([]);
   const navigate = useNavigate();
 
   // useEffect(() => {
@@ -44,11 +53,25 @@ export const Category = () => {
         </div>
       </Content>
       <Slider {...settings}>
-        {data.map((value) => {
-          return (
-            <CategoryCard key={value.id} data={value.cetegory} onClick={() => navigate(`/properties?category_id=${value.id}`)} />
-          );
-        })}
+        {data1?.length
+          ? data1.map((v) => {
+            return (
+              <CategoryCard
+                key={v?.id}
+                onClick={() => navigate(`/properties?category=${v?.id}`)}
+                data={v}
+              />
+            );
+          })
+          : mockDataCategory.map((v) => {
+            return (
+              <CategoryCard
+                key={v?.id}
+                onClick={() => navigate(`/properties?category=${v?.id}`)}
+                data={v}
+              />
+            );
+          })}
       </Slider>
     </Container>
   );

@@ -10,12 +10,17 @@ const { REACT_APP_BASE_URL: url } = process.env
 
 
 export const Favourite = () => {
+
   const [data, setData] = useState([]);
   const { search } = useLocation()
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch(`${url}/houses/getAll/favouriteList`)
+    fetch(`${url}/houses/getAll/favouriteList`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")},`
+      }
+    })
       .then((res) => res.json())
       .then((res) => {
         setData(res?.data)

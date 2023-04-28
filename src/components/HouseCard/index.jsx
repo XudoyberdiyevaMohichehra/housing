@@ -4,7 +4,27 @@ import { Container, Img, Content, Details, Icons,  Divider } from './style'
 
 
 export const HouseCard =({data = {}, gap, onClick} )=>{
-  const { attachments, city, country, description, salePrice, price, address, houseDetails, category } = data;
+  const { attachments, city, country, description, salePrice, price, address, houseDetails, favorite, category } = data;
+  
+  const save = (e) => {
+    e?.stopPropagation();
+    fetch(
+      `http://ec2-3-140-188-131.us-east-2.compute.amazonaws.com:8081/api/v1/houses/addFavourite/${id}?favourite=${!favorite}`,
+      {
+        method: "PUT",
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        if (favorite) res?.success && message.warning("Successfully disliked");
+        else res?.success && message.info("Successfully liked");
+        refetch && refetch();
+      });
+  };
+
   return(
     <div style={{display: 'flex'}} onClick={onClick}>
     <Container gap={gap} >
@@ -39,7 +59,7 @@ export const HouseCard =({data = {}, gap, onClick} )=>{
         </Details.Items>
         <Details.Items footer row>
           <Icons.Resize />
-          <Icons.Love />
+            <Icons.Love onClick={save} favorite={favorite} />
         </Details.Items>
       </Content>
      

@@ -1,11 +1,15 @@
 import React from "react";
-import noimg from '../../assets/img/noimg.jpeg'
-import { Container, Img, Content, Details, Icons,  Divider } from './style'
+import noimg from '../../assets/img/noimg.jpeg';
+import { Container, Img, Content, Details, Icons,  Divider } from './style';
+import { PropertiesContext } from "../../context/properties";
+import { useContext } from "react";
+import { message } from "antd";
 
 
 export const HouseCard =({data = {}, gap, onClick} )=>{
-  const { attachments, city, country, description, salePrice, price, address, houseDetails, favorite, category } = data;
-  
+  const { attachments, city, country, description, salePrice, price, address, houseDetails, favorite, category, id } = data;
+  const [{ refetch }] = useContext(PropertiesContext);
+
   const save = (e) => {
     e?.stopPropagation();
     fetch(

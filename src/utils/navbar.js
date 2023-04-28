@@ -45,7 +45,7 @@ export const navbar = [
     },
     {
         id: useId,
-        element: <Favourite/>,
+        element: <Favourite/> ,
         title: "Favourite",
         path: "/favourite",
         private: true,

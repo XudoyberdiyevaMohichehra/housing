@@ -15,7 +15,7 @@ export const Favourite = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch(`${url}/houses/list${search}`)
+    fetch(`${url}/houses/getAll/favouriteList`)
       .then((res) => res.json())
       .then((res) => {
         setData(res?.data)
@@ -33,11 +33,14 @@ export const Favourite = () => {
         Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
       </div>
       <Container>
-        {data.map((value) => {
+        {data?.length ? (data.map((value) => {
           return <HouseCard
             onClick={() => onSelect(value.id)}
             key={value.id} data={value} />
-        })}
+        }) ) : (
+            <h1> No Data Found</h1>
+        )
+      }
       </Container>
     </>
   )

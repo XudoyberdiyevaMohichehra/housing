@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 const { REACT_APP_BASE_URL: url } = process.env
 
 
-export const Favourite = () => {
+export const MyProfile = () => {
   const [data, setData] = useState([]);
   const { search } = useLocation()
   const navigate = useNavigate()
@@ -45,4 +45,4 @@ export const Favourite = () => {
     </>
   )
 }
-export default Favourite
+export default MyProfile

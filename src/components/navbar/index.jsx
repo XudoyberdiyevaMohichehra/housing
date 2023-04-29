@@ -14,7 +14,7 @@ export const Navbar =()=>{
   const navigate = useNavigate();
 
   const onClick = ()=>{
-    navigate('/signin')
+    navigate('/register')
   }
   
   const onClickProfile = ({

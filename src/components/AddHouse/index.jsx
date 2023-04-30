@@ -83,24 +83,28 @@ export const AddNewHouse = () => {
           <h1 className="subTitle">Address</h1>
           <Section>
             <Input
+              width='%'
               onChange={formik.handleChange}
               name="country"
               value={formik.values.country}
               placeholder={"Country"}
             />
             <Input
+              width='%'
               onChange={formik.handleChange}
               name="region"
               value={formik.values.region}
               placeholder={"Region"}
             />
             <Input
+              width='%'
               onChange={formik.handleChange}
               name="city"
               value={formik.values.city}
               placeholder={"City"}
             />
             <Input
+              width='%'
               onChange={formik.handleChange}
               name="address"
               value={formik.values.address}
@@ -110,6 +114,7 @@ export const AddNewHouse = () => {
           <h1 className="subTitle">Apartment info</h1>
           <Section>
             <Input
+              width='%'
               type="number"
               name="houseDetails.area"
               value={formik.values.houseDetails.area}
@@ -117,6 +122,7 @@ export const AddNewHouse = () => {
               placeholder={"area"}
             />
             <Input
+              width='%'
               type="number"
               name="houseDetails.bath"
               value={formik.values.houseDetails.bath}
@@ -124,6 +130,7 @@ export const AddNewHouse = () => {
               placeholder={"bath"}
             />
             <Input
+              width='%'
               type="number"
               name="houseDetails.beds"
               value={formik.values.houseDetails.beds}
@@ -131,6 +138,7 @@ export const AddNewHouse = () => {
               placeholder={"beds"}
             />
             <Input
+              width='%'
               type="number"
               name="houseDetails.garage"
               value={formik.values.houseDetails.garage}
@@ -138,6 +146,7 @@ export const AddNewHouse = () => {
               placeholder={"garage"}
             />
             <Input
+              width='%'
               type="number"
               name="houseDetails.yearBuilt"
               onChange={formik.handleChange}
@@ -145,6 +154,7 @@ export const AddNewHouse = () => {
               placeholder={"yearBuilt"}
             />
             <Input
+              width='%'
               type="number"
               name="houseDetails.room"
               onChange={formik.handleChange}
@@ -153,6 +163,7 @@ export const AddNewHouse = () => {
             />
 
             <SelectAnt
+              width='%'
               defaultValue={"Select Category"}
               value={formik?.values?.categoryId}
               // onChange={formik.handleChange}
@@ -182,18 +193,21 @@ export const AddNewHouse = () => {
           <h1 className="subTitle">Price</h1>
           <Section>
             <Input
+              width='%'
               name="name"
               onChange={formik.handleChange}
               value={formik.values.name}
               placeholder={"Name"}
             />
             <Input
+              width='%'
               name="zipCode"
               onChange={formik.handleChange}
               value={formik.values.zipCode}
               placeholder={"Zip code"}
             />
             <Input
+              width='%'
               type="number"
               onChange={formik.handleChange}
               name="price"
@@ -201,6 +215,7 @@ export const AddNewHouse = () => {
               placeholder={"Price"}
             />
             <Input
+              width='%'
               type="number"
               name="salePrice"
               onChange={formik.handleChange}
@@ -210,6 +225,7 @@ export const AddNewHouse = () => {
           </Section>
           <Section>
             <Input
+              width='%'
               onChange={({ target: { value } }) => setImg(value)}
               value={img}
               placeholder="Add Image URL"

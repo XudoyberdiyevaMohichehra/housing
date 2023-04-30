@@ -69,6 +69,6 @@ export const navbar = [
         private: true,
         hidden: true,
     },
-    { id: useId, element: <h1>Contacts</h1>, title: 'Contacts', path: '/contacts', private: false, hidden: false },
+    // { id: useId, element: <h1>Contacts</h1>, title: 'Contacts', path: '/contacts', private: false, hidden: false },
     { id: useId, element: <Register />, title: 'Sign In', path: '/register', private: false, hidden: true },
 ]

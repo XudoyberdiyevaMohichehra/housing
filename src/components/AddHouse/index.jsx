@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 import { Wrapper, MenuWrapper, Section, SelectAnt, IconDel } from "./style";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Input } from "../Generic";
+import { Input } from "../Generics";
 import { Checkbox } from "antd";
 
 import { useFormik } from "formik";
 
-import { Button } from "../Generic/Button";
+import { Button } from "../Generics/Button";
 import TextArea from "antd/es/input/TextArea";
 import useRequest from "../../hooks/useRequest";
 

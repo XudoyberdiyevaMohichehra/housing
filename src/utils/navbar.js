@@ -3,6 +3,7 @@ import useId from "../hooks/useID"
 import Register from '../pages/Register'
 import Favourite from '../pages/Favourite'
 import MyProfile from '../pages/MyProfile'
+import AddNewHousePage from '../pages/AddNewHouse'
 const HomePage = React.lazy(() => import('../pages/home/index'));
 const PropertyPage = React.lazy(() => import('../pages/properties/index'));
 const HouseItem = React.lazy(() => import('../pages/HouseItem/index'));

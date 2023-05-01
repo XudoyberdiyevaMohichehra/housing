@@ -1,5 +1,5 @@
 
-import MyProfile from "../../components/Myprofile";
+import MyProfile from '../../components/MyProfilecopy'
 
 export const MyProfilePage = () => <MyProfile />;
  

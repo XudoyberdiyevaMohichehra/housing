@@ -6,8 +6,19 @@ import Button from "../Generics/Button";
 import { Checkbox } from "antd";
 
 import nouser from "../../assets/img/nouser.jpeg";
-import { Wrapper, Container, Details, Section, Content, Icons, Description, User } from "./style";
-// import { Yandex } from "../Generics/Yandex";
+import {
+  Blur,
+  Container,
+  Content,
+  Description,
+  Details,
+  Icons,
+  ImgContainer,
+  MiniImgsContainer,
+  Section,
+  User,
+  Wrapper,
+} from "./style";// import { Yandex } from "../Generics/Yandex";
 import { Recent } from "../Recent";
 
 // const {REACT_APP_BASE_URL: url} = process.env;
@@ -31,6 +42,24 @@ export const HouseItem = () => {
 
   return (
     <>
+      <ImgContainer>
+        <ImgContainer.Main
+          src={(data?.attachments && data?.attachments[0]?.imgPath) || nouser}
+          alt="img"
+        />
+        <MiniImgsContainer>
+          {data?.attachments?.slice(1, 5).map((v, i) => {
+            return data?.attachments?.length > 5 && i === 3 ? (
+              <Blur.Container key={v.id}>
+                <ImgContainer.SubImg key={v.id} src={v.imgPath} alt="img" />
+                <Blur>+{data?.attachments.length - 5}</Blur>
+              </Blur.Container>
+            ) : (
+              <ImgContainer.SubImg key={v.id} src={v.imgPath} alt="img" />
+            );
+          })}
+        </MiniImgsContainer>
+      </ImgContainer>
       <Wrapper>
         <Container flex={3}>
             {/* <h1>{data?.address}</h1> */}

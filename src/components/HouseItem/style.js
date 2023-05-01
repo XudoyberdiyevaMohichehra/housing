@@ -10,8 +10,7 @@ import { ReactComponent as ruler } from "../../assets/icons/ruler.svg";
 
 import { ReactComponent as resize } from "../../assets/icons/resize.svg";
 
-
-export const Container = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex: ${({ flex }) => flex};
@@ -25,29 +24,30 @@ export const Container = styled.div`
 
     gap: 24px;
   }
-  
 `;
-export const Wrapper = styled.div`
+
+const Wrapper = styled.div`
   padding: var(--padding);
   max-width: var(--width);
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   display: flex;
+  display: flex;
   padding-top: 24px;
 `;
 
-export const Section = styled.div`
-  display:flex;
-  justify-content:space-between;
+const Section = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
 
-export const Content = styled.div`
+const Content = styled.div`
   display: flex;
   flex-direction: ${({ flex }) => !flex && "column"};
   align-items: ${({ flex }) => flex && "center"};
   justify-content: ${({ flex }) => !flex && "center"};
-  `;
+`;
 
 Content.Title = styled.div`
   font-family: "Montserrat";
@@ -61,23 +61,7 @@ Content.Title = styled.div`
   margin-bottom: ${({ mb }) => `${mb}px`};
 `;
 
-export const Details = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 32px 0;
-`;
-
-Details.Title = styled.div`
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #696969;
-  margin: 0 24px 0 8px;
-`;
-
-export const Icons = styled.div``;
+const Icons = styled.div``;
 
 Icons.Share = styled(share)`
   display: flex;
@@ -122,7 +106,23 @@ Icons.Text = styled.div`
   color: #696969;
 `;
 
-export const Description = styled.div`
+const Details = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 32px 0;
+`;
+
+Details.Title = styled.div`
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #696969;
+  margin: 0 24px 0 8px;
+`;
+
+const Description = styled.div`
   margin-top: 16px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
   font-family: "Montserrat";
@@ -134,7 +134,7 @@ export const Description = styled.div`
   margin-bottom: 48px;
 `;
 
-export const User = styled.div``;
+const User = styled.div``;
 
 User.Img = styled.img`
   width: 56px;
@@ -142,3 +142,75 @@ User.Img = styled.img`
   border-radius: 50%;
   margin-right: 10px;
 `;
+
+const ImgContainer = styled.div`
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: var(--padding);
+  margin-top: 24px;
+  margin-bottom: 24px;
+`;
+
+const MiniImgsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-left: 20px;
+`;
+
+ImgContainer.Main = styled.img`
+  width: 100%;
+  max-width: 580px;
+  max-height: 400px;
+`;
+
+ImgContainer.SubImg = styled.img`
+  width: 100%;
+  max-width: 280px;
+  max-height: 190px;
+  position: relative;
+`;
+
+const Blur = styled.div`
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+`;
+
+Blur.Container = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  max-height: 190px;
+`;
+
+export {
+  Container,
+  Section,
+  Content,
+  Icons,
+  Details,
+  Description,
+  Wrapper,
+  User,
+  ImgContainer,
+  MiniImgsContainer,
+  Blur,
+};

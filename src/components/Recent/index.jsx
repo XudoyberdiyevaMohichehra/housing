@@ -22,6 +22,18 @@ const settings = {
   appendDots: (dots) => <h1> {dots} </h1>,
 };
 
+ const HouseListdata = [
+  { id: 1, name: 'Villa' },
+  { id: 2, name: 'Dom' },
+  { id: 3, name: 'Hovli' },
+  { id: 4, name: 'Dacha' },
+  { id: 5, name: 'Villa' },
+  { id: 4, name: 'Dacha' },
+  { id: 5, name: 'Villa' },
+  { id: 4, name: 'Dacha' },
+  { id: 5, name: 'Villa' },
+]
+
 export const Recent = () => {
   
   const [data, setData] = useState([]);
@@ -44,11 +56,21 @@ export const Recent = () => {
         </div>
       </Content>
       <Slider {...settings}>
-        {data.map((value, index) => {
+       
+        {data.length ? data.map((value, index) => {
           return (
             <HouseCard
               key={index}
-              gap={20}
+              gap={10}
+              onClick={() => navigate(`/properties/${value.id}`)}
+              data={value}
+            />
+          );
+        }) : HouseListdata.map((value, index) => {
+          return (
+            <HouseCard
+              key={index}
+              gap={10}
               onClick={() => navigate(`/properties/${value.id}`)}
               data={value}
             />

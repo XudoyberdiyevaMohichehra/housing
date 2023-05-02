@@ -26,6 +26,18 @@ export const Property =()=>{
     navigate(`/properties/${id}`);
   };
 
+   const HouseListdata = [
+    { id: 1, name: 'Villa' },
+    { id: 2, name: 'Dom' },
+    { id: 3, name: 'Hovli' },
+    { id: 4, name: 'Dacha' },
+    { id: 5, name: 'Villa' },
+    { id: 4, name: 'Dacha' },
+    { id: 5, name: 'Villa' },
+    { id: 4, name: 'Dacha' },
+    { id: 5, name: 'Villa' },
+  ]
+
   return(
     <>
       <div className="title">Properties</div>
@@ -33,11 +45,28 @@ export const Property =()=>{
         Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
       </div>
     <Container>
-          {data.map((value)=>{
+          {/* {data.map((value)=>{
             return <HouseCard 
             onClick={()=>onSelect(value.id)}
             key={value.id} data={value}/>
-          })}
+          })} */}
+        {data.length ? data.map((value) => {
+          return (
+            <HouseCard
+              onClick={() => onSelect(value.id)}
+              key={value.id}
+              data={value}
+            />
+          );
+        }) : HouseListdata.map((value) => {
+          return (
+            <HouseCard
+              onClick={() => onSelect(value.id)}
+              key={value.id}
+              data={value}
+            />
+          );
+        })}
     </Container>
           </>
   )

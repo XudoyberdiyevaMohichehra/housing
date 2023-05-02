@@ -56,7 +56,7 @@ export const Footer = () => {
       
       <Section>
             <div >Copyright © 2021 CreativeLayers. All Right Reserved.</div>
-            <button style={{ width: '45px', height:'45px', color: 'white', background: '#0061df', border:'none', borderRadius: '2px',}}>v</button>
+            {/* <button style={{ width: '45px', height:'45px', color: 'white', background: '#0061df', border:'none', borderRadius: '2px',}}>v</button> */}
       </Section>
      </LogoWrapper>
     </Container>

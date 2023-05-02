@@ -1,6 +1,8 @@
 import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom"
 import { navbar } from "../utils/navbar"
 import Navbar from "../components/navbar"
+import ToTopButton from "../components/ToTopButton";
+
 
 
 const Root =()=>{
@@ -16,6 +18,7 @@ const Root =()=>{
             <Route path="/" element={<Navigate to={'/home'}/>}/>
           </Route>
          </Routes>
+            <ToTopButton />
         </BrowserRouter>
     )
 }

@@ -88,5 +88,6 @@ export const Navbar =()=>{
     </Container>
             </>
   )
+  console.log('j');
 }
 export default Navbar

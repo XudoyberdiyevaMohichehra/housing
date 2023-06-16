@@ -57,9 +57,7 @@ export const Navbar =()=>{
               })
             }
           </Section>
-          {/* <Section>
-            <Button onClick={onClick} type='dark'>Login</Button>
-          </Section> */}
+         
             <Section>
               {token ? (
                 <Dropdown
@@ -88,6 +86,5 @@ export const Navbar =()=>{
     </Container>
             </>
   )
-  console.log('j');
 }
 export default Navbar
